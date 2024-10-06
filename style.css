@@ -2,3 +2,8 @@
     margin: 0;
     padding: 0;
 }
+
+header {
+    height: 800px;
+    background-color: E1FF8F;
+}
