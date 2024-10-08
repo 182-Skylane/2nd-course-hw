@@ -153,10 +153,11 @@ body {
 }
 
 .moving-item {
-  flex-shrink: 0;
   line-height: 1.5;
   font-weight: 900;
   white-space: nowrap;
+  text-decoration: none;
+  color: rgb(32, 32, 39);
 }
 
 .about {
