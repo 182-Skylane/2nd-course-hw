@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat;
+}
+
+.center {
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+}
+
+.header {
+    height: 710px;
+    overflow: hidden;
+    background-color: #E1FF8F;
+    position: relative;
+}
+
+.bigstar {
+    position: absolute;
+    right: -380px;
+    top: -260px;
+    overflow: hidden;
+}
+
+.star2 {
+    position: absolute;
+    top: 94px;
+    left: 63px;
+}
+
+.star3 {
+    position: absolute;
+    top: 69px;
+    left: 156px;
+}
+
+.star4 {
+    position: absolute;
+    top: 568px;
+    right: 344px;
+}
+
+.star5 {
+    position: absolute;
+    top: 538px;
+    right: 455px;
+}
+
+.triangle {
+    position: absolute;
+    bottom: 110px;
+    right: 135px;
+}
+
+.Vector8-25 {
+    position: absolute;
+    bottom: -90px;
+    right: 16px;
+}
+
+.Vector8-35 {
+    position: absolute;
+    top: 248px;
+    right: 245px;
+}
+
+.Vector10-40 {
+    position: absolute;
+    top: -14px;
+    right: 300px;
+}
+
+.Vector11 {
+    position: absolute;
+    bottom: -66px;
+    right: 80px;
+    overflow: hidden;
+}
+
+.Star-about {
+    position: absolute;
+    top: 108px;
+    right: -110px;
+}
+
+.top {
+    max-width: 768px;
+}
+
+.top__title {
+    padding-top: 196px;
+    color: rgb(32, 32, 39);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-bottom: 24px;
+}
+
+.top__text {
+    color: rgb(32, 32, 39);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-bottom: 48px;
+}
+
+.top__btn {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141.69%;
+    letter-spacing: 0%;
+    text-align: center;
+    width: 247px;
+    height: 66px;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(32, 32, 39);
+    cursor: pointer;
+}
+
+.top__btn:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(32, 32, 39);
+    transition: 0.2s;
+}
+
+.moving-bar {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+    z-index: 1;
+    height: 90px;
+    background-color: #BCEC30;
+    color: rgb(32, 32, 39);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 4%;
+    text-align: left;
+}
+
+.moving-item {
+    flex-shrink: 0;
+    line-height: 1.5;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.about {
+    position: relative;
+    overflow: hidden;
+    min-height: 1470px;
+    background: rgb(32, 32, 39);
+}
+
+.about__title {
+    padding-top: 94px;
+    color: #fff;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-bottom: 24px;
+}
+
+.about__text {
+    color: #fff;
+    max-width: 788px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-bottom: 72px;
+}
+
+.card-box {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 52px;
+}
+
+.card__item {
+    width: 380px;
+    min-height: 473px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.card__item-img {
+    width: 100%;
+}
+
+.card__item-link {
+    text-decoration: none;
+    z-index: 1;
+}
+
+.card__item-desc {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 30px;
+    padding-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card__item-btn {
+    width: 108px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 16px 10px 16px;
+    border-radius: 52.58px;
+    background: rgb(247, 247, 247);
+    border: none;
+    color: rgb(32, 32, 39);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: 0px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.card__item-name {
+    color: rgb(32, 32, 39);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0px;
+    text-align: left;
+}
