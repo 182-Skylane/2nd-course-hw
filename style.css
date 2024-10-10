@@ -197,7 +197,7 @@ body {
   margin-bottom: 52px;
 }
 
-.card__item {
+.card__item-wrapper {
   width: 380px;
   min-height: 473px;
   background-color: #fff;
@@ -208,7 +208,7 @@ body {
   width: 100%;
 }
 
-.card__item-link {
+.card__item {
   text-decoration: none;
   z-index: 1;
 }
