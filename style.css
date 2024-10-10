@@ -87,6 +87,18 @@ body {
   right: -110px;
 }
 
+.star11 {
+  position: absolute;
+  left: 25px;
+  top: 770px;
+}
+
+.star12 {
+  position: absolute;
+  left: 40px;
+  top: 822px;
+}
+
 .top {
   max-width: 768px;
 }
