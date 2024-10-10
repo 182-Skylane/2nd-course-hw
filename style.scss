@@ -216,7 +216,14 @@ body {
     gap: 32px;
     flex-wrap: wrap;
     margin-bottom: 52px;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
 }
+
 
 .card__item {
     width: 380px;
@@ -434,6 +441,11 @@ body {
         gap: 24px;
     }
 
+    .game1,
+    .game2 {
+        order: -1;
+    }
+
     .game4,
     .game6 {
         order: 1;
@@ -499,5 +511,14 @@ body {
     .center {
         padding-left: 24px;
         padding-right: 24px;
+    }
+
+    .wrap {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card__item {
+        height: 550px;
     }
 }
