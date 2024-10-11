@@ -534,17 +534,12 @@ body {
         height: 550px;
     }
 
-    .card-box {
-        display: none;
-
-        &-mob {
-            display: block;
-            gap: 24px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 52px;
-        }
+    .card-box-mob {
+        display: block;
+        gap: 24px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 52px;
     }
-
 }
