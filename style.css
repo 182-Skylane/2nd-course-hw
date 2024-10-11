@@ -488,9 +488,12 @@ body {
   .card__item {
     height: 550px;
   }
+<<<<<<< HEAD
   .card-box {
     display: none;
   }
+=======
+>>>>>>> 04878192118289353e994694374d922b002a4fdc
   .card-box-mob {
     display: block;
     gap: 24px;
