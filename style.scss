@@ -87,11 +87,25 @@ body {
     right: -110px;
 }
 
+.star11 {
+    position: absolute;
+    left: 25px;
+    top: 770px;
+}
+
+.star12 {
+    position: absolute;
+    left: 40px;
+    top: 822px;
+}
+
 .top {
     max-width: 768px;
 }
 
 .top__title {
+    position: relative;
+    z-index: 1;
     padding-top: 196px;
     color: rgb(32, 32, 39);
     font-size: 64px;
@@ -103,6 +117,9 @@ body {
 }
 
 .top__text {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
     color: rgb(32, 32, 39);
     font-size: 24px;
     font-weight: 400;
@@ -176,6 +193,10 @@ body {
     letter-spacing: 0px;
     text-align: left;
     padding-bottom: 24px;
+
+    &-mob {
+        display: none;
+    }
 }
 
 .about__text {
@@ -195,61 +216,330 @@ body {
     gap: 32px;
     flex-wrap: wrap;
     margin-bottom: 52px;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &-mob {
+        display: none;
+    }
 }
 
-.card__item-wrapper {
+
+.card__item {
     width: 380px;
     min-height: 473px;
     background-color: #fff;
     border-radius: 30px;
+
+    &-img {
+        width: 100%;
+    }
+
+    &-link {
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    &-desc {
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 30px;
+        padding-bottom: 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &-info {
+        display: none;
+    }
+
+    &-btn {
+        width: 108px;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 8px 16px 10px 16px;
+        border-radius: 52.58px;
+        background: rgb(247, 247, 247);
+        border: none;
+        color: rgb(32, 32, 39);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: 0px;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    &-name {
+        color: rgb(32, 32, 39);
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    &-name-mob {
+        display: none;
+    }
+
+    &-play-btn {
+        display: none;
+    }
 }
 
-.card__item-img {
-    width: 100%;
-}
-
-.card__item {
-    text-decoration: none;
-    z-index: 1;
-}
-
-.card__item-desc {
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 30px;
-    padding-bottom: 36px;
+.footer {
+    height: 150px;
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.card__item-btn {
-    width: 108px;
-    height: 36px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 8px 16px 10px 16px;
-    border-radius: 52.58px;
-    background: rgb(247, 247, 247);
-    border: none;
-    color: rgb(32, 32, 39);
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 110%;
-    letter-spacing: 0px;
-    text-align: left;
-    cursor: pointer;
+    background: rgb(189, 237, 53);
 }
 
-.card__item-name {
-    color: rgb(32, 32, 39);
-    font-family: Montserrat;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 39px;
+.footer__text {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
     letter-spacing: 0px;
-    text-align: left;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        height: 649px;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .top__title {
+        padding-top: 147px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 49px;
+        text-align: center;
+    }
+
+    .top__text {
+        height: 60px;
+        max-width: 296px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        padding-bottom: 36px;
+    }
+
+    .top__btn {
+        width: 285px;
+        height: 55px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 141.69%;
+        text-align: center;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .card-box,
+    .triangle,
+    .Vector8-25,
+    .Vector10-40,
+    .Vector8-35,
+    .Vector11,
+    .Star-about,
+    .star11,
+    .star12 {
+        display: none;
+    }
+
+    .card-box-mob {
+        display: block;
+        gap: 24px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 52px;
+    }
+
+    .bigstar {
+        stroke: black;
+        stroke-width: 2px;
+        stroke-dasharray: 2, 2;
+        stroke-linejoin: round;
+        paint-order: stroke;
+        height: 245px;
+        left: 270px;
+        top: -84px;
+    }
+
+    .star2 {
+        width: 35px;
+        height: 35px;
+        left: 65px;
+        top: 115px;
+    }
+
+    .star3 {
+        left: 120px;
+        top: 75px;
+        width: 21px;
+        height: 21px;
+    }
+
+    .star4 {
+        width: 39px;
+        height: 41px;
+        top: 580px;
+        right: 50px;
+    }
+
+    .star5 {
+        width: 18px;
+        height: 18px;
+        top: 560px;
+        right: 100px;
+    }
+
+    .moving-bar {
+        height: 51px;
+    }
+
+    .moving-item {
+        height: 19px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: 4%;
+    }
+
+    .about__title,
+    .about__text,
+    .card__item-btn {
+        display: none;
+    }
+
+    .about__title-mob {
+        display: block;
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 49px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+
+
+    .game1,
+    .game2 {
+        order: -1;
+    }
+
+    .game4,
+    .game6 {
+        order: 1;
+    }
+
+    .card__item-info {
+        display: block;
+        max-width: 249px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: left;
+    }
+
+    .card__item-name {
+        max-width: 285px;
+    }
+
+    .quiz {
+        display: none;
+    }
+
+    .card__item-name-mob {
+        display: block;
+        color: rgb(32, 32, 39);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    .card__item-play-btn {
+        display: block;
+        height: 55px;
+        box-sizing: border-box;
+        border: 1px solid rgb(32, 32, 39);
+        border-radius: 60px;
+        background: rgb(32, 32, 39);
+        color: rgb(255, 255, 255);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 141.69%;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    .footer {
+        height: 100px;
+
+        &__text {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1303px) {
+    .center {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .wrap {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card__item {
+        height: 550px;
+    }
+
+    .card-box-mob {
+        display: block;
+        gap: 24px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 52px;
+    }
 }

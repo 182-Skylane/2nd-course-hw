@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework1</title>
+    <title>Homework1+2</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,11 +17,11 @@
     <header class="header">
         <div class="top center">
             <h1 class="top__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
-            <p class="top__text">Тебе предстоит пройти несколько увлекательных игр.<br> Если готов, нажимай
+            <p class="top__text">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай
                 <b>«Поехали!»</b> и
                 <b>приступай</b>.
             </p>
-            <button class="top__btn">Поехали!</button>
+            <a href="#about"><button class="top__btn">Поехали!</button></a>
         </div>
         <div class="stars">
             <img class="bigstar" src="img/Big_star.svg" alt="big-star">
@@ -51,67 +51,163 @@
         <p><img class="moving-item" src="img/Star-black.svg" alt="star"></p>
     </div>
     <div class="about center">
-        <h1 class="about__title">Об играх</h1>
+        <h1 class="about__title" id="about">Об играх</h1>
+        <h1 class="about__title-mob" id="about">Мини-игры</h1>
         <p class="about__text">В моей коллекции представлено 6 игр на разные темы.Игры несложные — в них может поиграть
             каждый. Все игры доступны для пользования.</p>
         <img class="Star-about" src="img/Star-about.svg" alt="star">
+        <img class="star11" src="img/Star11.svg" alt="star">
+        <img class="star12" src="img/Star12.svg" alt="star">
         <div class="card-box">
-            <a class="card__item" href="#">
-                <div class="card__item-wrapper" id="game1">
+            <div class="card-box-wrapper">
+                <a class="card__item-link game1" href="#">
+                    <div class="card__item" id="game1">
+                        <img class="card__item-img" src="img/ugaday.svg" alt="game">
+                        <div class="card__item-desc">
+                            <button class="card__item-btn">Игра №1</button>
+                            <p class="card__item-name">Угадай число</p>
+                            <p class="card__item-info">Попробуй угадать случайное число от 1 до 100.</p>
+                            <button class="card__item-play-btn">Играть!</button>
+                        </div>
+                    </div>
+                </a>
+                <a class="card__item-link game4" href="#">
+                    <div class="card__item" id="game4">
+                        <img class="card__item-img" src="img/stone_scissors.png" alt="game">
+                        <div class="card__item-desc">
+                            <button class="card__item-btn">Игра №4</button>
+                            <p class="card__item-name">Камень, ножницы, <br>бумага</p>
+                            <p class="card__item-info">Сыграй в популярную игру против компьютера.</p>
+                            <button class="card__item-play-btn">Играть!</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card-box-wrapper">
+                <a class="card__item-link game2" href="#">
+                    <div class="card__item" id="game2">
+                        <img class="card__item-img" src="img/simple_arithmetic.svg" alt="game">
+                        <div class="card__item-desc">
+                            <button class="card__item-btn">Игра №2</button>
+                            <p class="card__item-name">Простая арифметика</p>
+                            <p class="card__item-info">Попробуй решить простые арифметические задачи.</p>
+                            <button class="card__item-play-btn">Играть!</button>
+                        </div>
+                    </div>
+                </a>
+                <a class="card__item-link game5" href="#">
+                    <div class="card__item" id="game5">
+                        <img class="card__item-img" src="img/simple_quiz.svg" alt="game">
+                        <div class="card__item-desc">
+                            <button class="card__item-btn">Игра №5</button>
+                            <p class="card__item-name quiz">Простая викторина</p>
+                            <p class="card__item-name-mob">Викторина</p>
+                            <p class="card__item-info">Отвечай на вопросы викторины с вариантами ответов.</p>
+                            <button class="card__item-play-btn">Играть!</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card-box-wrapper wrap">
+                <a class="card__item-link game3" href="#">
+                    <div class="card__item" id="game3">
+                        <img class="card__item-img" src="img/reverse_text.svg" alt="game">
+                        <div class="card__item-desc">
+                            <button class="card__item-btn">Игра №3</button>
+                            <p class="card__item-name">Переверни текст</p>
+                            <p class="card__item-info">Попробуй ввести текст, который будет перевернут.</p>
+                            <button class="card__item-play-btn">Играть!</button>
+                        </div>
+                    </div>
+                </a>
+                <a class="card__item-link game6" href="#">
+                    <div class="card__item" id="game6">
+                        <img class="card__item-img" src="img/generator.svg" alt="game">
+                        <div class="card__item-desc">
+                            <button class="card__item-btn">Игра №6</button>
+                            <p class="card__item-name">Генератор случайных цветов</p>
+                            <p class="card__item-info">Игра, в которой при клике на кнопку фон страницы меняется на
+                                случайный.</p>
+                            <button class="card__item-play-btn">Играть!</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="card-box-mob">
+            <a class="card__item-link game1" href="#">
+                <div class="card__item" id="game1">
                     <img class="card__item-img" src="img/ugaday.svg" alt="game">
                     <div class="card__item-desc">
                         <button class="card__item-btn">Игра №1</button>
                         <p class="card__item-name">Угадай число</p>
+                        <p class="card__item-info">Попробуй угадать случайное число от 1 до 100.</p>
+                        <button class="card__item-play-btn">Играть!</button>
                     </div>
                 </div>
             </a>
-            <a class="card__item" href="#">
-                <div class="card__item-wrapper" id="game2">
+            <a class="card__item-link game2" href="#">
+                <div class="card__item" id="game2">
                     <img class="card__item-img" src="img/simple_arithmetic.svg" alt="game">
                     <div class="card__item-desc">
                         <button class="card__item-btn">Игра №2</button>
                         <p class="card__item-name">Простая арифметика</p>
+                        <p class="card__item-info">Попробуй решить простые арифметические задачи.</p>
+                        <button class="card__item-play-btn">Играть!</button>
                     </div>
                 </div>
             </a>
-            <a class="card__item" href="#">
-                <div class="card__item-wrapper" id="game3">
+            <a class="card__item-link game3" href="#">
+                <div class="card__item" id="game3">
                     <img class="card__item-img" src="img/reverse_text.svg" alt="game">
                     <div class="card__item-desc">
                         <button class="card__item-btn">Игра №3</button>
                         <p class="card__item-name">Переверни текст</p>
+                        <p class="card__item-info">Попробуй ввести текст, который будет перевернут.</p>
+                        <button class="card__item-play-btn">Играть!</button>
                     </div>
                 </div>
             </a>
-            <a class="card__item" href="#">
-                <div class="card__item-wrapper" id="game4">
-                    <img class="card__item-img" src="img/stone_scissors_paper.svg" alt="game">
+            <a class="card__item-link game4" href="#">
+                <div class="card__item" id="game4">
+                    <img class="card__item-img" src="img/stone_scissors.png" alt="game">
                     <div class="card__item-desc">
                         <button class="card__item-btn">Игра №4</button>
-                        <p class="card__item-name">Камень, ножницы, бумага</p>
+                        <p class="card__item-name">Камень, ножницы, <br>бумага</p>
+                        <p class="card__item-info">Сыграй в популярную игру против компьютера.</p>
+                        <button class="card__item-play-btn">Играть!</button>
                     </div>
                 </div>
             </a>
-            <a class="card__item" href="#">
-                <div class="card__item-wrapper" id="game5">
+            <a class="card__item-link game5" href="#">
+                <div class="card__item" id="game5">
                     <img class="card__item-img" src="img/simple_quiz.svg" alt="game">
                     <div class="card__item-desc">
                         <button class="card__item-btn">Игра №5</button>
-                        <p class="card__item-name">Простая викторина</p>
+                        <p class="card__item-name quiz">Простая викторина</p>
+                        <p class="card__item-name-mob">Викторина</p>
+                        <p class="card__item-info">Отвечай на вопросы викторины с вариантами ответов.</p>
+                        <button class="card__item-play-btn">Играть!</button>
                     </div>
                 </div>
             </a>
-            <a class="card__item" href="#">
-                <div class="card__item-wrapper" id="game6">
+            <a class="card__item-link game6" href="#">
+                <div class="card__item" id="game6">
                     <img class="card__item-img" src="img/generator.svg" alt="game">
                     <div class="card__item-desc">
                         <button class="card__item-btn">Игра №6</button>
                         <p class="card__item-name">Генератор случайных цветов</p>
+                        <p class="card__item-info">Игра, в которой при клике на кнопку фон страницы меняется на
+                            случайный.</p>
+                        <button class="card__item-play-btn">Играть!</button>
                     </div>
                 </div>
             </a>
         </div>
     </div>
+    <footer class="footer">
+        <p class="footer__text">Все права защищены.</p>
+    </footer>
 </body>
 
 </html>
