@@ -488,6 +488,9 @@ body {
   .card__item {
     height: 550px;
   }
+  .card-box {
+    display: none;
+  }
   .card-box-mob {
     display: block;
     gap: 24px;
