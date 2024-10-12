@@ -238,6 +238,10 @@ body {
   text-decoration: none;
   z-index: 1;
 }
+.card__item-link:hover {
+  scale: 1.07;
+  transition: 0.3s;
+}
 .card__item-desc {
   padding-left: 32px;
   padding-right: 32px;

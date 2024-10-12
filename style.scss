@@ -242,6 +242,11 @@ body {
     &-link {
         text-decoration: none;
         z-index: 1;
+
+        &:hover {
+            scale: 1.07;
+            transition: 0.3s;
+        }
     }
 
     &-desc {
