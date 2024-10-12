@@ -8,8 +8,8 @@ body {
 }
 
 .center {
-  padding-left: calc(50% - 640px);
-  padding-right: calc(50% - 640px);
+  padding-left: calc(50% - 610px);
+  padding-right: calc(50% - 610px);
 }
 
 .header {
