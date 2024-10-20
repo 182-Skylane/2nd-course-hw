@@ -8,8 +8,8 @@ body {
 }
 
 .center {
-  padding-left: calc(50% - 610px);
-  padding-right: calc(50% - 610px);
+  padding-left: calc(50% - 605px);
+  padding-right: calc(50% - 605px);
 }
 
 .header {
@@ -19,11 +19,17 @@ body {
   position: relative;
 }
 
-.bigstar {
+.star-big {
   position: absolute;
   right: -380px;
   top: -260px;
   overflow: hidden;
+}
+
+.star-about {
+  position: absolute;
+  top: 108px;
+  right: -110px;
 }
 
 .star2 {
@@ -50,41 +56,28 @@ body {
   right: 455px;
 }
 
-.triangle {
+.star6 {
   position: absolute;
-  bottom: 110px;
-  right: 135px;
+  top: 130px;
+  right: 78px;
 }
 
-.Vector8-25 {
+.star7 {
   position: absolute;
-  bottom: -90px;
-  right: 16px;
+  top: 96px;
+  right: 156px;
 }
 
-.Vector8-35 {
+.star8 {
   position: absolute;
-  top: 248px;
-  right: 245px;
+  bottom: 65px;
+  right: 67px;
 }
 
-.Vector10-40 {
+.star10 {
   position: absolute;
-  top: -14px;
-  right: 300px;
-}
-
-.Vector11 {
-  position: absolute;
-  bottom: -66px;
-  right: 80px;
-  overflow: hidden;
-}
-
-.Star-about {
-  position: absolute;
-  top: 108px;
-  right: -110px;
+  bottom: 45px;
+  right: 180px;
 }
 
 .star11 {
@@ -97,6 +90,37 @@ body {
   position: absolute;
   left: 40px;
   top: 822px;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 110px;
+  right: 135px;
+}
+
+.vector8-25 {
+  position: absolute;
+  bottom: -90px;
+  right: 16px;
+}
+
+.vector8-35 {
+  position: absolute;
+  top: 248px;
+  right: 245px;
+}
+
+.vector10-40 {
+  position: absolute;
+  top: -14px;
+  right: 300px;
+}
+
+.vector11 {
+  position: absolute;
+  bottom: -66px;
+  right: 80px;
+  overflow: hidden;
 }
 
 .top {
@@ -145,7 +169,6 @@ body {
   background: rgb(32, 32, 39);
   cursor: pointer;
 }
-
 .top__btn:hover {
   background: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
@@ -226,13 +249,13 @@ body {
 }
 
 .card__item {
-  width: 380px;
+  width: 378px;
   min-height: 473px;
   background-color: #fff;
   border-radius: 30px;
 }
 .card__item-img {
-  width: 100%;
+  max-width: 100%;
 }
 .card__item-link {
   text-decoration: none;
@@ -270,7 +293,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 110%;
-  letter-spacing: 0px;
   text-align: left;
   cursor: pointer;
 }
@@ -288,6 +310,88 @@ body {
 }
 .card__item-play-btn {
   display: none;
+}
+
+.games {
+  position: relative;
+  background: rgb(32, 32, 39);
+  border-top: 1px solid rgba(225, 255, 143, 0.3);
+  padding-bottom: 144px;
+}
+.games-box {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  z-index: 1;
+}
+.games a:nth-of-type(odd) {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.games__title {
+  padding-top: 46px;
+  padding-bottom: 72px;
+  color: #fff;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.games__item {
+  display: flex;
+  background-color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+}
+.games__item-link {
+  text-decoration: none;
+}
+.games__item-desc {
+  min-height: 249px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.games__item-name {
+  color: rgb(32, 32, 39);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.games__item-info {
+  color: rgb(32, 32, 39);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-right: 24px;
+  margin-bottom: 12px;
+}
+.games__item-play-btn {
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+  max-width: 247px;
+  height: 66px;
+  cursor: pointer;
+}
+.games__item-play-btn:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(32, 32, 39);
+  border: 1px solid #000;
+  transition: 0.2s;
 }
 
 .footer {
@@ -346,12 +450,13 @@ body {
     padding-right: 28px;
   }
   .card-box,
+  .games,
   .triangle,
-  .Vector8-25,
-  .Vector10-40,
-  .Vector8-35,
-  .Vector11,
-  .Star-about,
+  .vector8-25,
+  .vector10-40,
+  .vector8-35,
+  .vector11,
+  .star-about,
   .star11,
   .star12 {
     display: none;
@@ -364,14 +469,14 @@ body {
     flex-wrap: wrap;
     margin-bottom: 52px;
   }
-  .bigstar {
+  .star-big {
     stroke: black;
     stroke-width: 2px;
     stroke-dasharray: 2, 2;
     stroke-linejoin: round;
     paint-order: stroke;
     height: 245px;
-    left: 270px;
+    right: -100px;
     top: -84px;
   }
   .star2 {
@@ -480,27 +585,35 @@ body {
     line-height: 20px;
   }
 }
-@media (min-width: 769px) and (max-width: 1303px) {
+@media (min-width: 769px) and (max-width: 1235px) {
   .center {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .wrap {
     display: flex;
     flex-direction: row;
   }
   .card__item {
+    width: 360px;
     height: 550px;
   }
-  .card-box {
+  .card-box,
+  .games {
     display: none;
   }
-  .card-box-mob {
+  .card-box-mob,
+  .games-mob {
     display: block;
     gap: 24px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 52px;
+  }
+}
+@media (min-width: 374px) and (max-width: 767px) {
+  .card__item {
+    width: auto;
   }
 }/*# sourceMappingURL=style.css.map */
