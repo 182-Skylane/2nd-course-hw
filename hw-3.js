@@ -4,10 +4,10 @@ let password = 'гром'
 let pswrd = prompt('Введите пароль');
 
 if (password === pswrd) {
-    console.log('Пароль введен верно');
+    alert('Пароль введен верно');
 }
 else {
-    console.log('Пароль введен неправильно');
+    alert('Пароль введен неправильно');
 }
 
 // Задание 2
@@ -83,12 +83,7 @@ if (+userNumber !== +userNumber) {
 
 let clientOS = 1;
 let clientDeviceYear = Number(prompt('Введите года выпуска Вашего устройства'));
-// if (clientOS === 0) {
-//     console.log('Установите версию приложения для iOS по ссылке');
 
-// } else {
-//     console.log('Установите версию приложения для Android по ссылке');
-// }
 
 // Доп. задание 3
 
