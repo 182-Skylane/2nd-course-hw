@@ -52,3 +52,45 @@ for (let d = friday; d < fullMonth; d += 7) {
 
 //Доп. задание 1
 
+let k = 100;
+let itrn = 0;
+
+while (k > 0) {
+    k -= 7;
+    console.log(k);
+    itrn++
+}
+console.log(`iterations ${itrn}`);
+
+//Доп. задание 2
+
+let months = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь',
+    'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
+console.log(months);
+
+//Доп. задание 3
+
+const book = {
+    Название: 'Зелёная миля',
+    Автор: 'Стивен Кинг',
+    'Год издания': '1996',
+    Жанр: 'Роман'
+}
+
+for (const key in book) {
+    console.log(`${key} - ${book[key]}`);
+}
+
+//Доп. задание 4
+
+const numbers = [34, 49, 9, 16, 52, 11, 7];
+
+let min = numbers[0];
+for (const item of numbers) {
+    if (item < min) {
+        min = item;
+    }
+}
+console.log(min);
+
+
