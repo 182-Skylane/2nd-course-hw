@@ -191,6 +191,16 @@ body {
   letter-spacing: 4%;
   text-align: left;
 }
+.moving-bar__position {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.moving-bar span {
+  display: flex;
+  animation: scroll 28s infinite linear;
+}
 
 .moving-item {
   line-height: 1.5;
@@ -198,6 +208,10 @@ body {
   white-space: nowrap;
   text-decoration: none;
   color: rgb(32, 32, 39);
+}
+.moving-item:hover {
+  scale: 1.04;
+  transition: 0.2s;
 }
 
 .about {
@@ -583,6 +597,14 @@ body {
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-60%, 0);
   }
 }
 @media (min-width: 769px) and (max-width: 1235px) {
