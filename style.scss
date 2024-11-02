@@ -356,7 +356,7 @@ body {
         z-index: 1;
     }
 
-    a:nth-of-type(odd) {
+    section:nth-of-type(odd) {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;

@@ -13,10 +13,13 @@ function guessTheNumber() {
         alert('Загаданное число больше. Попробуй ещё раз');
         return guessTheNumber();
     }
-    else if (userX == randomNum) {
+    else if (userX === randomNum) {
         alert('Угадал!');
+        return randomNum = 1 + Math.floor(Math.random() * 100);
     }
     else {
         alert('Нужно ввести число');
     }
 }
+
+
