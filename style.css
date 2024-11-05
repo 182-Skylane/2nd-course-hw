@@ -338,7 +338,7 @@ body {
   gap: 32px;
   z-index: 1;
 }
-.games a:nth-of-type(odd) {
+.games section:nth-of-type(odd) {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
