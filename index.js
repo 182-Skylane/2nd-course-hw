@@ -66,3 +66,37 @@ function reverseText() {
     textRev = textRev.join('');
     alert(textRev);
 }
+
+function startQuiz() {
+    const quiz = [
+        {
+            question: "Какой цвет неба?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+
+    let correctCount = 0;
+
+    for (let i = 0; i < quiz.length; i++) {
+        const question = quiz[i];
+        const userAnswer = prompt(question.question + "\n" + question.options.join("\n"));
+
+        if (parseInt(userAnswer) === question.correctAnswer) {
+            correctCount++;
+        }
+    }
+
+    alert("Количество правильных ответов: " + correctCount);
+}
+
