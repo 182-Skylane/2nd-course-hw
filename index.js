@@ -86,17 +86,32 @@ function startQuiz() {
         }
     ];
 
+    const correctAnswers = [
+        "Синий", // правильный ответ на 1-й вопрос
+        ["Семь", "7"], // правильные ответы на 2-й вопрос
+        ["Пять", "5"]  // правильные ответы на 3-й вопрос
+    ];
+
     let correctCount = 0;
 
     for (let i = 0; i < quiz.length; i++) {
         const question = quiz[i];
-        const userAnswer = prompt(question.question + "\n" + question.options.join("\n"));
+        const userAnswer = prompt(question.question).trim().toLowerCase();
 
-        if (parseInt(userAnswer) === question.correctAnswer) {
-            correctCount++;
+        // Проверка для первого вопроса
+        if (i === 0) {
+            if (userAnswer === correctAnswers[i].toLowerCase()) {
+                correctCount++;
+            }
+        }
+        // Проверка для второго и третьего вопросов
+        else if (i === 1 || i === 2) {
+            if (correctAnswers[i].includes(userAnswer)) {
+                correctCount++;
+            }
         }
     }
 
-    alert("Количество правильных ответов: " + correctCount);
+    alert("Правильных ответов: " + correctCount);
 }
 
