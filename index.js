@@ -23,6 +23,7 @@ function guessTheNumber() {
     }
 }
 
+
 //Простая арфметика
 function generateQuestion() {
     const operators = ['+', '-', '*', '/'];
@@ -64,9 +65,11 @@ function reverseText() {
     textRev = textRev.split('');
     textRev.reverse();
     textRev = textRev.join('');
-    alert(textRev);
+    alert(textRev.toLowerCase());
 }
 
+
+//Викторина
 function startQuiz() {
     const quiz = [
         {
@@ -87,31 +90,37 @@ function startQuiz() {
     ];
 
     const correctAnswers = [
-        "Синий", // правильный ответ на 1-й вопрос
-        ["Семь", "7"], // правильные ответы на 2-й вопрос
-        ["Пять", "5"]  // правильные ответы на 3-й вопрос
+        "синий",
+        ["семь", "7"],
+        ["пять", "5"]
     ];
 
     let correctCount = 0;
 
     for (let i = 0; i < quiz.length; i++) {
         const question = quiz[i];
-        const userAnswer = prompt(question.question).trim().toLowerCase();
+        const userAnswer = prompt(question.question + "\n" + question.options.join("\n")).trim().toLowerCase();
 
-        // Проверка для первого вопроса
+        let isCorrect = false;
+
         if (i === 0) {
-            if (userAnswer === correctAnswers[i].toLowerCase()) {
-                correctCount++;
-            }
+            isCorrect = (userAnswer === correctAnswers[i].toLowerCase());
+        } else if (i === 0 || i === 1) {
+            isCorrect = correctAnswers[i].includes(userAnswer);
+        } else if (i === 2 || i === 3) {
+            isCorrect = correctAnswers[i].includes(userAnswer);
         }
-        // Проверка для второго и третьего вопросов
-        else if (i === 1 || i === 2) {
-            if (correctAnswers[i].includes(userAnswer)) {
-                correctCount++;
-            }
+
+        if (isCorrect) {
+            correctCount++;
+            alert("Верно!");
+        } else {
+            alert("Неверно. Правильный ответ: " + correctAnswers[i][0]);
         }
     }
 
     alert("Правильных ответов: " + correctCount);
 }
 
+
+//Камень, ножницы, бумага
