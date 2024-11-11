@@ -23,6 +23,7 @@ function guessTheNumber() {
     }
 }
 
+
 //Простая арфметика
 function generateQuestion() {
     const operators = ['+', '-', '*', '/'];
@@ -64,5 +65,62 @@ function reverseText() {
     textRev = textRev.split('');
     textRev.reverse();
     textRev = textRev.join('');
-    alert(textRev);
+    alert(textRev.toLowerCase());
 }
+
+
+//Викторина
+function startQuiz() {
+    const quiz = [
+        {
+            question: "Какой цвет неба?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+
+    const correctAnswers = [
+        "синий",
+        ["семь", "7"],
+        ["пять", "5"]
+    ];
+
+    let correctCount = 0;
+
+    for (let i = 0; i < quiz.length; i++) {
+        const question = quiz[i];
+        const userAnswer = prompt(question.question + "\n" + question.options.join("\n")).trim().toLowerCase();
+
+        let isCorrect = false;
+
+        if (i === 0) {
+            isCorrect = (userAnswer === correctAnswers[i].toLowerCase());
+        } else if (i === 0 || i === 1) {
+            isCorrect = correctAnswers[i].includes(userAnswer);
+        } else if (i === 2 || i === 3) {
+            isCorrect = correctAnswers[i].includes(userAnswer);
+        }
+
+        if (isCorrect) {
+            correctCount++;
+            alert("Верно!");
+        } else {
+            alert("Неверно. Правильный ответ: " + correctAnswers[i][0]);
+        }
+    }
+
+    alert("Правильных ответов: " + correctCount);
+}
+
+
+//Камень, ножницы, бумага
