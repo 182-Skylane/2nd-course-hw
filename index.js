@@ -124,3 +124,30 @@ function startQuiz() {
 
 
 //Камень, ножницы, бумага
+
+function stonePaper() {
+    const options = ["камень", "ножницы", "бумага"];
+    const userChoice = prompt("Выберите: камень, ножницы или бумага").toLowerCase();
+
+    if (!options.includes(userChoice)) {
+        alert("Неправильный ввод! Пожалуйста, выберите камень, ножницы или бумагу.");
+        return;
+    }
+
+    const computerChoice = options[Math.floor(Math.random() * options.length)];
+
+    let result;
+    if (userChoice === computerChoice) {
+        result = "ничья";
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        result = "победа!";
+    } else {
+        result = "поражение";
+    }
+
+    alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\nРезультат: ${result}`);
+}
