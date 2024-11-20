@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework-9</title>
+</head>
+
+<body>
+    <h1 id="header">Это заголовок</h1>
+    <button id="toggleButton">Скрыть</button>
+
+    <script>
+        const header = document.querySelector('#header');
+        const button = document.querySelector('#toggleButton');
+
+        button.addEventListener('click', function () {
+            if (header.style.display === 'none') {
+                header.style.display = 'block';
+                button.textContent = 'Скрыть';
+            } else {
+                header.style.display = 'none';
+                button.textContent = 'Показать';
+            }
+        });
+    </script>
+</body>
+
+</html>
