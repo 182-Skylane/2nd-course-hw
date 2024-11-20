@@ -8,20 +8,110 @@
 </head>
 
 <body>
-    <h1 id="header">Это заголовок</h1>
-    <button id="toggleButton">Скрыть</button>
+    <div class="task_1">
+        <h1 class="header">Это скрываемый заголовок, при нажатии на кнопку он будет скрыт. А если нажать на кнопку ещё
+            раз,
+            то этот текст снова отобразится</h1>
+        <button class="toggleButton">Скрыть</button>
+    </div>
+    <div class="task_2">
+        <p id="text">Здесь будет изменяться цвет текста абзаца на синий, при нажатии на кнопку "Изменить цвет".</p>
+        <button id="colorButton">Изменить цвет</button>
+    </div>
+    <div class="task_3">
+        <h1 id="header">Это заголовок, в котором будет изменяться текст</h1>
+        <button id="changeTextButton">Изменить текст</button>
+    </div>
+    <div class="task_4">
+        <p class="description">Первый параграф</p>
+        <p class="description">Второй параграф</p>
+        <div class="description">Третий параграф</div>
+        <button class="changeTextButton">Изменить текст</button>
+    </div>
+    <div class="task_5">
+        <p class="description">Первый элемент описания</p>
+        <p class="description">Второй элемент описания</p>
+        <p class="info">Информационный текст</p>
+        <p class="description">Третий элемент описания</p>
+        <p class="note">Заметка</p>
+
+        <button class="changeTextButtonAll">Изменить текст</button>
+    </div>
+    <div class="task_6">
+        <button id="addButton">Добавление элемента</button>
+    </div>
+    <div class="task_7">
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit.</p>
+        <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, ducimus.</p>
+        <p class="note">Заметка.</p>
+
+        <button class="removeButton">Удалить</button>
+    </div>
+
 
     <script>
-        const header = document.querySelector('#header');
-        const button = document.querySelector('#toggleButton');
+        //Задание 1
+        const header = document.querySelector('.header');
+        const buttonHide = document.querySelector('.toggleButton');
 
-        button.addEventListener('click', function () {
+        buttonHide.addEventListener('click', function () {
             if (header.style.display === 'none') {
                 header.style.display = 'block';
-                button.textContent = 'Скрыть';
+                buttonHide.textContent = 'Скрыть';
             } else {
                 header.style.display = 'none';
-                button.textContent = 'Показать';
+                buttonHide.textContent = 'Показать';
+            }
+        });
+        //Задание 2
+        const paragraph = document.querySelector('#text');
+        const buttonColor = document.querySelector('#colorButton');
+
+        buttonColor.addEventListener('click', function () {
+            paragraph.style.color = 'blue';
+        });
+        //Задание 3
+        const headerTextChange = document.querySelector('#header');
+        const buttonTextChanger = document.querySelector('#changeTextButton');
+
+        buttonTextChanger.addEventListener('click', function () {
+            headerTextChange.textContent = 'Привет, мир!';
+        });
+        //Задание 4
+        const button4 = document.querySelector('.changeTextButton');
+
+        button4.addEventListener('click', function () {
+            const descriptions = document.querySelectorAll('.description');
+            descriptions.forEach(function (element) {
+                element.textContent = 'Измененный текст';
+            });
+        });
+        //Задание 5
+        const button5 = document.querySelector('.changeTextButtonAll');
+
+        button5.addEventListener('click', function () {
+            const descriptions = document.querySelectorAll('.description');
+            descriptions.forEach(function (element) {
+                element.textContent = 'Новый текст';
+            });
+        });
+        //Задание 6
+        const button6 = document.querySelector('#addButton');
+
+        button6.addEventListener('click', function () {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'Новый абзац';
+            document.body.appendChild(newParagraph);
+        });
+        //Задание 7
+        const button7 = document.querySelector('.removeButton');
+
+        button7.addEventListener('click', function () {
+            const firstDescription = document.querySelector('.description');
+            if (firstDescription) {
+                firstDescription.remove();
             }
         });
     </script>

@@ -151,3 +151,9 @@ function stonePaper() {
 
     alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\nРезультат: ${result}`);
 }
+
+//Генератор случайных цветов
+
+
+
+
