@@ -154,6 +154,14 @@ function stonePaper() {
 
 //Генератор случайных цветов
 
+const colorButton = document.getElementById('colorButton');
+const body = document.querySelector('.games');
+
+colorButton.addEventListener('click', function () {
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    body.style.backgroundColor = randomColor;
+});
+
 
 
 
