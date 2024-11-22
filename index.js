@@ -1,7 +1,19 @@
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+
 //Угадай число
 let randomNum = 1 + Math.floor(Math.random() * 100);
 console.log(randomNum);
-
 
 function guessTheNumber() {
     let userX = +prompt('Привет! Попробуй угадать число от 1 до 100');
@@ -22,7 +34,6 @@ function guessTheNumber() {
         alert('Нужно ввести число');
     }
 }
-
 
 //Простая арфметика
 function generateQuestion() {
@@ -67,7 +78,6 @@ function reverseText() {
     textRev = textRev.join('');
     alert(textRev.toLowerCase());
 }
-
 
 //Викторина
 function startQuiz() {
@@ -122,9 +132,7 @@ function startQuiz() {
     alert("Правильных ответов: " + correctCount);
 }
 
-
 //Камень, ножницы, бумага
-
 function stonePaper() {
     const options = ["камень", "ножницы", "бумага"];
     const userChoice = prompt("Выберите: камень, ножницы или бумага").toLowerCase();
@@ -148,12 +156,10 @@ function stonePaper() {
     } else {
         result = "поражение";
     }
-
     alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\nРезультат: ${result}`);
 }
 
 //Генератор случайных цветов
-
 const colorButton = document.getElementById('colorButton');
 const body = document.querySelector('.games');
 
@@ -161,7 +167,3 @@ colorButton.addEventListener('click', function () {
     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     body.style.backgroundColor = randomColor;
 });
-
-
-
-
