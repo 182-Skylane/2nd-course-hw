@@ -30,6 +30,7 @@ body {
     position: absolute;
     top: 108px;
     right: -110px;
+    overflow: hidden;
 }
 
 .star2 {
@@ -179,13 +180,10 @@ body {
 .moving-bar {
     display: flex;
     align-items: center;
-    gap: 50px;
     overflow: hidden;
-    z-index: 1;
     height: 90px;
     background-color: #BCEC30;
     color: rgb(32, 32, 39);
-    font-family: Montserrat;
     font-size: 30px;
     font-weight: 700;
     line-height: 110%;
@@ -264,13 +262,9 @@ body {
         flex-direction: column;
         gap: 32px;
     }
-
-    &-mob {
-        display: none;
-    }
 }
 
-.card__item {
+.card-item {
     width: 378px;
     min-height: 473px;
     background-color: #fff;
@@ -285,8 +279,8 @@ body {
         z-index: 1;
 
         &:hover {
-            scale: 1.07;
-            transition: 0.3s;
+            scale: 1.03;
+            transition: 0.4s;
         }
     }
 
@@ -334,10 +328,6 @@ body {
         text-align: left;
     }
 
-    &-name-mob {
-        display: none;
-    }
-
     &-play-btn {
         display: none;
     }
@@ -356,12 +346,6 @@ body {
         z-index: 1;
     }
 
-    section:nth-of-type(odd) {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-    }
-
     &__title {
         padding-top: 46px;
         padding-bottom: 72px;
@@ -378,11 +362,11 @@ body {
         background-color: #fff;
         border-radius: 30px;
         text-decoration: none;
+        z-index: 1;
 
-        &-link {
-            text-decoration: none;
+        &-img {
+            max-width: 100%;
         }
-
 
         &-desc {
             min-height: 249px;
@@ -408,7 +392,7 @@ body {
             line-height: 32px;
             letter-spacing: 0px;
             text-align: left;
-            padding-right: 24px;
+            padding-right: 12px;
             margin-bottom: 12px;
         }
 
@@ -422,7 +406,7 @@ body {
             font-weight: 600;
             line-height: 141.69%;
             text-align: center;
-            max-width: 247px;
+            width: 247px;
             height: 66px;
             cursor: pointer;
 
@@ -499,27 +483,98 @@ body {
         padding-right: 28px;
     }
 
-    .card-box,
-    .games,
+    .about,
     .triangle,
     .vector8-25,
     .vector10-40,
     .vector8-35,
     .vector11,
     .star-about,
+    .star6,
+    .star7,
+    .star8,
+    .star10,
     .star11,
     .star12 {
         display: none;
     }
 
-    .card-box-mob {
-        display: block;
-        gap: 24px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 52px;
+    .games {
+        padding-bottom: 48px;
+
+        &__title {
+            padding-bottom: 48px;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 49px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+
+        &-box {
+            gap: 24px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }
     }
+
+    .games__item {
+        display: flex;
+        flex-direction: column;
+        width: 343px;
+
+        &-img {
+            width: 100%;
+        }
+
+        &-desc {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 30px;
+            min-height: 182px;
+        }
+
+        &-name {
+            color: rgb(32, 32, 39);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 39px;
+            text-align: left;
+        }
+
+        &-info {
+            padding-right: 0px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            text-align: left;
+        }
+
+        &-play-btn {
+            align-self: center;
+            width: 100%;
+            height: 55px;
+            box-sizing: border-box;
+            border: 1px solid rgb(32, 32, 39);
+            border-radius: 60px;
+            background: rgb(32, 32, 39);
+            color: rgb(255, 255, 255);
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 141.69%;
+            text-align: center;
+            margin-top: 0px;
+            padding-left: 28px;
+            padding-right: 28px;
+            padding-bottom: 2px;
+        }
+    }
+
+
 
     .star-big {
         stroke: black;
@@ -572,26 +627,6 @@ body {
         letter-spacing: 4%;
     }
 
-    .about__title,
-    .about__text,
-    .card__item-btn {
-        display: none;
-    }
-
-    .about__title-mob {
-        display: block;
-        color: rgb(255, 255, 255);
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 49px;
-        letter-spacing: 0px;
-        text-align: left;
-        padding-top: 48px;
-        padding-bottom: 48px;
-    }
-
-
-
     .game1,
     .game2 {
         order: -1;
@@ -600,50 +635,6 @@ body {
     .game4,
     .game6 {
         order: 1;
-    }
-
-    .card__item-info {
-        display: block;
-        max-width: 249px;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 20px;
-        text-align: left;
-    }
-
-    .card__item-name {
-        max-width: 285px;
-    }
-
-    .quiz {
-        display: none;
-    }
-
-    .card__item-name-mob {
-        display: block;
-        color: rgb(32, 32, 39);
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 39px;
-        letter-spacing: 0px;
-        text-align: left;
-    }
-
-    .card__item-play-btn {
-        display: block;
-        height: 55px;
-        box-sizing: border-box;
-        border: 1px solid rgb(32, 32, 39);
-        border-radius: 60px;
-        background: rgb(32, 32, 39);
-        color: rgb(255, 255, 255);
-        font-family: Montserrat;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 141.69%;
-        letter-spacing: 0%;
-        text-align: center;
-        margin-top: 16px;
     }
 
     .footer {
@@ -668,7 +659,7 @@ body {
     }
 }
 
-@media (min-width: 769px) and (max-width: 1235px) {
+@media (min-width: 788px) and (max-width: 1235px) {
     .center {
         padding-left: 20px;
         padding-right: 20px;
@@ -679,28 +670,16 @@ body {
         flex-direction: row;
     }
 
-    .card__item {
+    .card-item {
         width: 360px;
-        height: 550px;
-    }
-
-    .card-box,
-    .games {
-        display: none;
-
-        &-mob {
-            display: block;
-            gap: 24px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 52px;
-        }
+        height: 520px;
     }
 }
 
-@media (min-width: 374px) and (max-width: 767px) {
-    .card__item {
-        width: auto;
+@media (min-width: 1041px) and (max-width: 4000px) {
+    section:nth-of-type(odd) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
 }
