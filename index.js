@@ -100,37 +100,18 @@ function startQuiz() {
         }
     ];
 
-    const correctAnswers = [
-        "синий",
-        ["семь", "7"],
-        ["пять", "5"]
-    ];
-
     let correctCount = 0;
 
     for (let i = 0; i < quiz.length; i++) {
         const question = quiz[i];
-        const userAnswer = prompt(question.question + "\n" + question.options.join("\n")).trim().toLowerCase();
+        const userAnswer = prompt(question.question + "\n" + question.options.join("\n"));
 
-        let isCorrect = false;
-
-        if (i === 0) {
-            isCorrect = (userAnswer === correctAnswers[i].toLowerCase());
-        } else if (i === 0 || i === 1) {
-            isCorrect = correctAnswers[i].includes(userAnswer);
-        } else if (i === 2 || i === 3) {
-            isCorrect = correctAnswers[i].includes(userAnswer);
-        }
-
-        if (isCorrect) {
+        if (parseInt(userAnswer) === question.correctAnswer) {
             correctCount++;
-            alert("Верно!");
-        } else {
-            alert("Неверно. Правильный ответ: " + correctAnswers[i][0]);
         }
     }
 
-    alert("Правильных ответов: " + correctCount);
+    alert("Количество правильных ответов: " + correctCount);
 }
 
 //Камень, ножницы, бумага
