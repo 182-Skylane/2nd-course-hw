@@ -12,12 +12,23 @@ for (let smoothLink of smoothLinks) {
     });
 };
 
-//Угадай число
+// Угадай число
 let randomNum = 1 + Math.floor(Math.random() * 100);
 console.log(randomNum);
 
 function guessTheNumber() {
-    let userX = +prompt('Привет! Попробуй угадать число от 1 до 100');
+    let userX = prompt('Привет! Попробуй угадать число от 1 до 100', 'попробуй ввести 50');
+
+    if (userX === null) {
+        return;
+    }
+
+    userX = +userX;
+
+    if (isNaN(userX)) {
+        alert('Нужно ввести число');
+        return guessTheNumber();
+    }
 
     if (userX > randomNum) {
         alert('Загаданное число меньше. Попробуй ещё раз');
@@ -27,14 +38,12 @@ function guessTheNumber() {
         alert('Загаданное число больше. Попробуй ещё раз');
         return guessTheNumber();
     }
-    else if (userX === randomNum) {
-        alert('Угадал!');
-        return randomNum = 1 + Math.floor(Math.random() * 100);
-    }
     else {
-        alert('Нужно ввести число');
+        alert('Угадал!');
+        randomNum = 1 + Math.floor(Math.random() * 100);
     }
 }
+
 
 //Простая арфметика
 function generateQuestion() {
@@ -120,7 +129,7 @@ function stonePaper() {
     const userChoice = prompt("Выберите: камень, ножницы или бумага").toLowerCase();
 
     if (!options.includes(userChoice)) {
-        alert("Неправильный ввод! Пожалуйста, выберите камень, ножницы или бумагу.");
+        alert("Нужнро набрать в поле ввода камень, ножницы или бумага.");
         return;
     }
 
